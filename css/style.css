@@ -1,0 +1,135 @@
+@font-face {
+  font-family:GRfont;
+  src: url(../fonts/gomarice_no_continue.ttf);
+}
+@font-face {
+  font-family: padrao;
+  src: url(../fonts/Radio_Canada_Big/RadioCanadaBig-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family:Delta;
+  src: url(../fonts/undertale-deltarune-text-font-extended.ttf);
+}
+.tpg{
+  font-family: padrao;
+}
+.nav {
+  box-shadow: -4px 4px 20px #000000;
+}
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(66, 0, 106, 0.7);
+}
+
+.bg-img {
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: center;
+  height: 100vh;
+  width: 100%;
+}
+.bg-img2 {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: center;
+  height: 100vh;
+  width: 100%;
+}
+.shadow-gg {
+  box-shadow: -4px 4px 10px  rgba(0, 0, 0, 0.5);
+}
+
+.gradient-custom {
+  background-color: rgb(66, 0, 106);
+  background: linear-gradient(90deg, rgba(66, 0, 106, 1) 0%, rgba(140, 46, 226, 1) 100%, rgba(176, 82, 222, 1) 60%);
+}
+.gradient-custom2 {
+  background-color: rgb(66, 0, 106);
+  background: linear-gradient(180deg, rgba(66, 0, 106, 1) 0%, rgba(140, 46, 226, 1) 100%, rgba(176, 82, 222, 1) 60%);
+}
+nav .dropdown-item:hover {
+  background-color: rgba(176, 82, 222, 1);
+}
+li .form-control{
+  border: none;
+}
+body .btn-outline-secondary{
+  border-width: 2px;
+}
+body .btn-outline-secondary:hover{
+  border-width: 2px;
+  color: rgba(66, 0, 106, 1);
+  }
+  .btn-outline-white{
+    border-width: 2px;
+  } 
+  li .nav-under{
+    color:azure;
+    border-radius: 15px;
+  }
+  li .nav-under:hover{
+    color:azure;
+    background-color: rgba(66, 0, 106, 1);
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+.nav-under{
+  color:azure;
+}
+.nav-under:hover{
+  color:azure;
+  background-color: rgba(66, 0, 106, 1);
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.input-lg{
+  box-sizing: 300px;
+}
+.navbar-nav .nav-border-l {
+  border-left: 3px solid rgba(66, 0, 106, 0.5);
+  height: 100%;
+
+}
+.navbar-nav .nav-border-r {
+  border-right: 3px solid rgba(66, 0, 106, 0.5);
+  height: 100%;
+}
+.sec-site {
+  height: 100%;
+  padding-left: 30px;
+  margin-left: 320px;
+  margin-right: 320px;
+}
+.card {
+  min-height: 50%; /* Garante que o card tenha pelo menos a altura do conteúdo */
+}
+input.form-control {
+  box-sizing: border-box;
+}
+.undertale{
+  font-family: delta;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #000;
+  border: 2px solid #ffffff;
+}
+.loginSad {
+  text-shadow: 1px 1px 10px rgb(0, 0, 0, 0,7);
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+padding: 0;
+font-size: 0.9em;
+line-height: 0.9em;
+color: rgb(255, 0, 43);
+transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-webkit-transition: all .3s ease-in;
+}

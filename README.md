@@ -1,1 +1,1 @@
-Readme foi criado
+Pregiça de escrever o que foi adicionado nessa atualização

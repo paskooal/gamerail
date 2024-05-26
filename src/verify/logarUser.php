@@ -2,19 +2,21 @@
 session_start();
 if(isset($_POST["submit"])){
     if(isset($_POST["email"]) && isset($_POST["senhaUser"]) && !empty($_POST["email"]) && !empty($_POST["senhaUser"]) ){
-        require '../config.php';
+        require 'config.php';
         $email = $_POST["email"];
         $senhaUser = $_POST["senhaUser"];    
         $sql = "SELECT * FROM user WHERE email = :email AND senhaUser = :senhaUser";
-        $resultado = $conn->prepare($sql);
-        $resultado->bindValue(":email", $email);
-        $resultado->bindValue(":senhaUser", $senhaUser);
-        $resultado->execute();
-        if($resultado->rowCount() > 0){
-            $dados = $resultado->fetch();
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":email", $email);
+        $stmt->bindValue(":senhaUser", $senhaUser);
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+            $dados = $stmt->fetch();
             $_SESSION['senhaUser'] = $dados['senhaUser'];
             $_SESSION['email'] = $dados['email'];
-            var_dump($_SESSION['email']);
-            header("Location: ../index.php");
+            echo "<script>window.location.href='../index.php';</script>";                     
         } else {    
-            echo "Credenciais inválidas!";}}}?> 
+            $_SESSION['logError'] = "Credenciais inválidas!";
+            echo "<script>window.location.href='../login.php';</script>"; 
+         }}}
+?> 
