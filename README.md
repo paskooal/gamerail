@@ -1,1 +1,1 @@
-Pregiça de escrever o que foi adicionado nessa atualização
+A documentação tá na pasta Docs e o banco de dados na DB
