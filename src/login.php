@@ -37,6 +37,10 @@ if(isset($_SESSION['logError']) && !empty($_SESSION['logError'])) {
   echo '<p class="mt-4 loginSad">' . $_SESSION['logError'] . '</p>';
 unset($_SESSION['logError']);
 }
+if(isset ($_SESSION['sucesso']) && !empty ($_SESSION['sucesso'])){
+  echo '<p class="mt-4 loginHappy">' . $_SESSION['sucesso'] . '</p>';
+  unset($_SESSION['sucesso']);
+  }
 ?>
 </div>
                   <div class="text-center pt-1 mb-5 pb-1">

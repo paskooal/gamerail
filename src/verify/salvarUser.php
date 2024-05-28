@@ -19,8 +19,6 @@ if(isset($_POST["submit"])){
             echo "<script>window.location.href='../cadastro.php';</script>";
             exit();
         }
-
-        // Verifica se o nome de usuário já está cadastrado
         $sql = "SELECT * FROM user WHERE nomeUser = :nomeUser";
         $stmt = $conn->prepare($sql);
         $stmt->execute(['nomeUser' => $nomeUser]);
@@ -33,9 +31,9 @@ if(isset($_POST["submit"])){
         }
         $sql = "INSERT INTO user(nomeUser,senhaUser,email,dataNasc) VALUES (:nomeUser,:senhaUser,:email,:dataNasc)";
         $stmt = $conn->prepare($sql);
-         $stmt->execute(['nomeUser' => $nomeUser, 'senhaUser' => $senhaUser, 'email' => $email, 'dataNasc' => $dataNasc]);
-        header("location: ../login.php?success=ok");
-        ob_flush();
-        exit();}
-        }
+        $stmt->execute(['nomeUser' => $nomeUser, 'senhaUser' => $senhaUser, 'email' => $email, 'dataNasc' => $dataNasc]);
+        $_SESSION['sucesso'] = "Log-in efetuado com sucesso!";
+        echo "<script>window.location.href='../login.php';</script>";
+        exit();
+    }}
     ?>
