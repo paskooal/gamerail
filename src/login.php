@@ -23,14 +23,14 @@
                   <img src="../images/GRlogo.png" height="100" alt="logo"> <br>
                   <a href="index.php" style="font-family: GRfont;" class="text-decoration-none fs-1 text-white mb-2 pb-1 ">GAME RAIL</a>
                 </div>
-                <form autocomplete="off" data-parsley-validate action="verify/logarUser.php" method="post" class="text-white">
+                <form autocomplete="off" data-parsley-validate action="back/logarUser.php" method="post" class="text-white">
                   <p class="d-flex justify-content-center fs-5">Faça login em sua conta</p>
                   <div class="text-white form-floating mb-4">
                   <input required type="email" name="email" required data-parsley-trigger="change" type="email" name="email" required data-parsley-length="[8,100]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="*Este campo não pode conter espaços em branco." data-parsley-length-message="*Este campo deve ter entre 8 á 100 digitos." class="form-control rounded-4" id="floatingInput" placeholder="">
                   <label for="floatingInput">E-mail</label>
                   </div>
                   <div class="text-white form-floating mb-4">
-                  <input required type="password" name="senhaUser" required data-parsley-length="[8,45]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="*Este campo não pode conter espaços em branco." data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos." class="form-control rounded-4" id="floatingInput" placeholder="">
+                  <input required type="password" name="senha" required data-parsley-length="[8,45]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="*Este campo não pode conter espaços em branco." data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos." class="form-control rounded-4" id="floatingInput" placeholder="">
                   <label for="floatingInput">Senha</label>
                   <?php
 if(isset($_SESSION['logError']) && !empty($_SESSION['logError'])) {

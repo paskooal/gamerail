@@ -1,12 +1,12 @@
 <?php
 session_start();
 if(isset($_POST["submit"])){
-        if(isset($_POST["nomeUser"]) && ($_POST["email"]) && ($_POST["senhaUser"]) && ($_POST["dataNasc"])){
+        if(isset($_POST["username"]) && ($_POST["email"]) && ($_POST["senha"]) && ($_POST["dataNasc"])){
             require 'config.php';
 
-        $nomeUser = $_POST["nomeUser"];
+        $username = $_POST["username"];
         $email = $_POST["email"];
-        $senhaUser = $_POST["senhaUser"];
+        $senha = $_POST["senha"];
         $dataNasc = $_POST["dataNasc"];
 
         $sql = "SELECT * FROM user WHERE email = :email";
@@ -19,9 +19,9 @@ if(isset($_POST["submit"])){
             echo "<script>window.location.href='../cadastro.php';</script>";
             exit();
         }
-        $sql = "SELECT * FROM user WHERE nomeUser = :nomeUser";
+        $sql = "SELECT * FROM user WHERE username = :username";
         $stmt = $conn->prepare($sql);
-        $stmt->execute(['nomeUser' => $nomeUser]);
+        $stmt->execute(['username' => $username]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($row){
@@ -29,9 +29,9 @@ if(isset($_POST["submit"])){
             echo "<script>window.location.href='../cadastro.php';</script>";
             exit();
         }
-        $sql = "INSERT INTO user(nomeUser,senhaUser,email,dataNasc) VALUES (:nomeUser,:senhaUser,:email,:dataNasc)";
+        $sql = "INSERT INTO user(username,senha,email,dataNasc) VALUES (:username,:senha,:email,:dataNasc)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute(['nomeUser' => $nomeUser, 'senhaUser' => $senhaUser, 'email' => $email, 'dataNasc' => $dataNasc]);
+        $stmt->execute(['username' => $username, 'senha' => $senha, 'email' => $email, 'dataNasc'=>$dataNasc]);
         $_SESSION['sucesso'] = "Log-in efetuado com sucesso!";
         echo "<script>window.location.href='../login.php';</script>";
         exit();

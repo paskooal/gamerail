@@ -1,18 +1,18 @@
 <?php
 session_start();
 if(isset($_POST["submit"])){
-    if(isset($_POST["email"]) && isset($_POST["senhaUser"]) && !empty($_POST["email"]) && !empty($_POST["senhaUser"]) ){
+    if(isset($_POST["email"]) && isset($_POST["senha"]) && !empty($_POST["email"]) && !empty($_POST["senha"]) ){
         require 'config.php';
         $email = $_POST["email"];
-        $senhaUser = $_POST["senhaUser"];    
-        $sql = "SELECT * FROM user WHERE email = :email AND senhaUser = :senhaUser";
+        $senha = $_POST["senha"];    
+        $sql = "SELECT * FROM user WHERE email = :email AND senha = :senha";
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(":email", $email);
-        $stmt->bindValue(":senhaUser", $senhaUser);
+        $stmt->bindValue(":senha", $senha);
         $stmt->execute();
         if($stmt->rowCount() > 0){
             $dados = $stmt->fetch();
-            $_SESSION['senhaUser'] = $dados['senhaUser'];
+            $_SESSION['senha'] = $dados['senha'];
             $_SESSION['email'] = $dados['email'];
             echo "<script>window.location.href='../index.php';</script>";                     
         } else {    
