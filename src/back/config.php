@@ -10,10 +10,4 @@ try{
     }catch(PDOException $erro) {
       echo "Conexão Falhou: " . $erro->getMessage();
     }
-//read
-$sql = "SELECT * FROM user";
-$stmt = $conn->query($sql);
-$stmt->execute();
-var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
-?>
 

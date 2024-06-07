@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+include "back/adminVerfiy.php";
+?>
 <!doctype html>
 <html lang="pt-br">
 

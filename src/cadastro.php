@@ -45,18 +45,23 @@
                           class="col-6 form-control rounded-4" id="floatingInput" placeholder="">
                         <label for="floatingInput">Endereço email</label>
                       </div>
-                      <div class="text-white form-floating mb-4 ">
+                      <div class="text-white form-floating mb-4">
                         <input required data-parsley-length="[8,45]" data-parsley-pattern="^\S+$"
                           data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
                           data-parsley-length-message="*Este campo deve ter entre 8 á 45 digitos." type="password"
-                          name="senha" class="col-6 form-control rounded-4" id="floatingInput" placeholder="">
-                        <label for="floatingInput">Senha</label>
+                          name="senha" class="col-6 form-control rounded-4" id="senha" placeholder="">
+                        <label for="senha">Senha</label>
                       </div>
                       <div class="text-white form-floating mb-4">
                         <input required type="date" name="dataNasc" class="col-6 form-control rounded-4"
                           id="floatingInput" placeholder="">
+                          <label for="floatingInput">Data de nacimento</label>
+                        
+                          <div class="">
+                          <input type="checkbox" class="mt-4 ms-1" id="verSenha" onchange="exibir()">
+                          <a>Ver senha</a>
+                        </div>
                         <!-- era pra ter um sistema que verifica se o user tem mais de 14 anos -->
-                        <label for="floatingInput">Data de nacimento</label>
                         <?php
                         if (isset($_SESSION['logError']) && !empty($_SESSION['logError'])) {
                           echo '<p class="mt-4 loginSad">' . $_SESSION['logError'] . '</p>';
@@ -65,7 +70,6 @@
 
                         ?>
                       </div>
-                        <input type="checkbox" name="" id="">
                       <div class="text-center pt-1 mb-3">
                         <input class="shadow form-control btn btn-primary btn-lg active rounded-4 fw-bold nav-under"
                           value="Cadastre-se" name="submit" type="submit">
@@ -101,6 +105,22 @@
     </section>
   </div>
   </div>
+  <script>
+      $(function () {
+        $('.dropdown-toggle').dropdown();
+      });
+    </script>
+  <script>
+    function exibir() { 
+        var senha = document.getElementById('senha');
+        if(senha.type === "password"){
+          senha.type="text";
+        }
+        else{
+          senha.type="password";
+        }
+      }
+  </script>
   <script>
     $('#cadastro').parsley();
   </script>

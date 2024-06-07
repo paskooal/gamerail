@@ -42,8 +42,8 @@
                           data-parsley-pattern="^\S+$"
                           data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
                           data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos."
-                          class="form-control rounded-4" id="floatingInput" placeholder="">
-                        <label for="floatingInput">Senha</label>
+                          class="form-control rounded-4" id="senha" placeholder="">
+                        <label for="senha">Senha</label>
                         <?php
                         if (isset($_SESSION['logError']) && !empty($_SESSION['logError'])) {
                           echo '<p class="mt-4 loginSad">' . $_SESSION['logError'] . '</p>';
@@ -54,13 +54,13 @@
                           unset($_SESSION['sucesso']);
                         }
                         ?>
+                          <input type="checkbox" class="mt-4 ms-1" id="verSenha" onchange="exibir()">
+                          <a>Ver senha</a>
                       </div>
                       <div class="text-center pt-1 mb-5 pb-1">
                         <input class="shadow form-control btn btn-primary btn-lg active rounded-4 fw-bold nav-under"
                           name="submit" value="Entrar" type="submit"> <br>
                       </div>
-                      <!-- <div class="mt-2">
-                    <!-- <a class="" href="#!">Esqueceu a senha?</a> </div>-->
 
 
                       <div class="d-flex align-items-center justify-content-center pb-4">
@@ -89,6 +89,18 @@
     </section>
   </div>
   </div>
+</body>
+<script>
+    function exibir() { 
+        var senha = document.getElementById('senha');
+        if(senha.type === "password"){
+          senha.type="text";
+        }
+        else{
+          senha.type="password";
+        }
+      }
+  </script>
   <script>
     $('#cadastro').parsley();
   </script>
@@ -98,7 +110,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-</body>
+
 <?php
 if (isset($GET_['success'])) {
   if ($GET_['success'] == 'ok') {
@@ -108,5 +120,4 @@ if (isset($GET_['success'])) {
   }
 }
 ?>
-
 </html>
