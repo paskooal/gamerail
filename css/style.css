@@ -68,6 +68,16 @@ body .btn-outline-secondary:hover{
   .btn-outline-white{
     border-width: 2px;
   } 
+  
+  li .nav-mobile{
+    color:azure;
+    background-color: rgba(66, 0, 106, 1);
+  }
+  li .nav-mobile:hover{
+    color:azure;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
   li .nav-under{
     color:azure;
     border-radius: 15px;
