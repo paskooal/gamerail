@@ -46,9 +46,9 @@
                         <label for="floatingInput">Endereço email</label>
                       </div>
                       <div class="text-white form-floating mb-4">
-                        <input required data-parsley-length="[8,45]" data-parsley-pattern="^\S+$"
+                        <input required data-parsley-length="[4,45]" data-parsley-pattern="^\S+$"
                           data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
-                          data-parsley-length-message="*Este campo deve ter entre 8 á 45 digitos." type="password"
+                          data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos." type="password"
                           name="senha" class="col-6 form-control rounded-4" id="senha" placeholder="">
                         <label for="senha">Senha</label>
                       </div>

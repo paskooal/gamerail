@@ -38,7 +38,7 @@
                         <label for="floatingInput">E-mail</label>
                       </div>
                       <div class="text-white form-floating mb-4">
-                        <input required type="password" name="senha" required data-parsley-length="[8,45]"
+                        <input required type="password" name="senha" required data-parsley-length="[4,45]"
                           data-parsley-pattern="^\S+$"
                           data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
                           data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos."
@@ -55,7 +55,7 @@
                         }
                         ?>
                           <input type="checkbox" class="mt-4 ms-1" id="verSenha" onchange="exibir()">
-                          <a>Ver senha</a>
+                          <span>Ver senha</span>
                       </div>
                       <div class="text-center pt-1 mb-5 pb-1">
                         <input class="shadow form-control btn btn-primary btn-lg active rounded-4 fw-bold nav-under"
