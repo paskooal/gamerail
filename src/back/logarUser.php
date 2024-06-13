@@ -14,7 +14,7 @@ if(isset($_POST["submit"])){
             $dados = $stmt->fetch();
             $_SESSION['senha'] = $dados['senha'];
             $_SESSION['email'] = $dados['email'];
-            echo "<script>window.location.href='../index.php';</script>";                     
+            echo "<script>window.location.href='../../index.php';</script>";                     
         } else {    
             $_SESSION['logError'] = "Credenciais inválidas!";
             echo "<script>window.location.href='../login.php';</script>"; 

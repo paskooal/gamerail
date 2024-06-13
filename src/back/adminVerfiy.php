@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['senha']) && isset($_SESSION['email'])){
-  require 'back/config.php';
+  require 'config.php';
   $email = $_SESSION["email"];
   $senha = $_SESSION["senha"];    
   $sql = "SELECT adminUnlock FROM user WHERE email = :email AND senha = :senha";
@@ -10,10 +10,8 @@ if (isset($_SESSION['senha']) && isset($_SESSION['email'])){
     $stmt->execute();
     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
     if($resultado['adminUnlock'] == 1){
-      echo "papibaquigrafo";
+      $_SESSION['menuDev']="<li><a class='dropdown-item' href='src/dev/dashboard.php'>Menu desenvolvedor</a></li>";
     }
-    else{
-      echo "enzoCnta";
-    }
+    else{}
 }
 ?>

@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
         $sql = "INSERT INTO user(username,senha,email,dataNasc) VALUES (:username,:senha,:email,:dataNasc)";
         $stmt = $conn->prepare($sql);
         $stmt->execute(['username' => $username, 'senha' => $senha, 'email' => $email, 'dataNasc'=>$dataNasc]);
-        $_SESSION['sucesso'] = "Log-in efetuado com sucesso!";
+        $_SESSION['sucesso'] = "Cadastro efetuado com sucesso!";
         echo "<script>window.location.href='../login.php';</script>";
         exit();
     }}

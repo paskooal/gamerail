@@ -23,7 +23,7 @@
                   <div class="card-body p-md-5 mx-md-4">
                     <div class="text-white text-center">
                       <img src="../images/GRlogo.png" height="100" alt="logo"> <br>
-                      <a href="index.php" style="font-family: GRfont;"
+                      <a href="../index.php" style="font-family: GRfont;"
                         class="text-decoration-none fs-1 text-white mb-2 pb-1 ">GAME RAIL</a>
                     </div>
                     <form autocomplete="off" data-parsley-validate action="back/logarUser.php" method="post"
