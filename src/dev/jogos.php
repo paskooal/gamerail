@@ -14,7 +14,7 @@ require '../back/adminLock.php';
 <body class="tpg bg-img2">
   <!--navbar-->
   <?php 
-   require 'devbar.php';
+   require 'devback/devbar.php';
 ?>
   <!--site base-->
   <div class="color-overlay">

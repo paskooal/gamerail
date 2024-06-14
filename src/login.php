@@ -26,22 +26,22 @@
                       <a href="../index.php" style="font-family: GRfont;"
                         class="text-decoration-none fs-1 text-white mb-2 pb-1 ">GAME RAIL</a>
                     </div>
-                    <form autocomplete="off" data-parsley-validate action="back/logarUser.php" method="post"
+                    <form autocomplete="off" data-parsley-validate action="back/logarUser.php" method="post" id="login"
                       class="text-white">
                       <p class="d-flex justify-content-center fs-5">Faça login em sua conta</p>
                       <div class="text-white form-floating mb-4">
                         <input required type="email" name="email" required data-parsley-trigger="change" type="email"
                           name="email" required data-parsley-length="[8,100]" data-parsley-pattern="^\S+$"
-                          data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
-                          data-parsley-length-message="*Este campo deve ter entre 8 á 100 digitos."
+                          data-parsley-pattern-message="Este campo não pode conter espaços em branco."
+                          data-parsley-length-message="Este campo deve ter entre 8 á 100 digitos."
                           class="form-control rounded-4" id="floatingInput" placeholder="">
                         <label for="floatingInput">E-mail</label>
                       </div>
                       <div class="text-white form-floating mb-4">
                         <input required type="password" name="senha" required data-parsley-length="[4,45]"
                           data-parsley-pattern="^\S+$"
-                          data-parsley-pattern-message="*Este campo não pode conter espaços em branco."
-                          data-parsley-length-message="*Este campo deve ter entre 4 á 45 digitos."
+                          data-parsley-pattern-message="Este campo não pode conter espaços em branco."
+                          data-parsley-length-message="Este campo deve ter entre 4 á 45 digitos."
                           class="form-control rounded-4" id="senha" placeholder="">
                         <label for="senha">Senha</label>
                         <?php
@@ -102,15 +102,15 @@
       }
   </script>
   <script>
-    $('#cadastro').parsley();
+    $('#login').parsley();
+
   </script>
   <script src="../parsley/jquery-3.4.1.min.js"></script>
   <script src="../parsley/parsley.min.js"></script>
-  <script src="../parsley/parsley.css"></script>
+  <script src="../parsley/pt-br.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
 <?php
 if (isset($GET_['success'])) {
   if ($GET_['success'] == 'ok') {
