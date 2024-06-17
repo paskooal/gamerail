@@ -16,9 +16,9 @@
     <section class="h-100">
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-xl-10">
+          <div class="col-xl-10 mt-5 d-flex justify-content-center align-items-center">
             <div style="background-color: #42006a;" class="card card-shadow border-0 rounded-5 text-black" style="height: 100%;">
-              <div class="row g-0">
+              <div class="row">
                 <div class="col-lg-6">
                   <div class="card-body p-md-5 mx-md-4">
                     <div class="text-white text-center">
@@ -28,20 +28,20 @@
                     <form autocomplete="off" data-parsley-validate action="back/salvarUser.php" id="cadastro" method="post" class="text-white">
                       <p class="d-flex justify-content-center fs-5">Faça login em sua conta</p>
                       <div class="text-white form-floating mb-4">
-                        <input required data-parsley-length="[4,20]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 4 á 20 digitos." type="text" name="username" class="col-6 form-control rounded-4" id="floatingInput" placeholder="">
-                        <label for="floatingInput">Nome de usuário</label>
+                        <input required data-parsley-length="[4,20]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 4 á 20 digitos." type="text" name="username" class="col-6 form-control rounded-4" class="floatingInput" placeholder="">
+                        <label for="floatingInput">Nome de usuário*</label>
                       </div>
                       <div class="text-white form-floating mb-4">
-                        <input required data-parsley-trigger="change" type="email" name="email" required data-parsley-length="[8,100]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 8 á 100 digitos." class="col-6 form-control rounded-4" id="floatingInput" placeholder="">
-                        <label for="floatingInput">Endereço email</label>
+                        <input required data-parsley-trigger="change" type="email" name="email" required data-parsley-length="[8,100]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 8 á 100 digitos." class="col-6 form-control rounded-4" class="floatingInput" placeholder="">
+                        <label for="floatingInput">Endereço email*</label>
                       </div>
                       <div class="text-white form-floating mb-4">
                         <input required data-parsley-length="[4,45]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 4 á 45 digitos." type="password" name="senha" class="col-6 form-control rounded-4" id="senha" placeholder="">
-                        <label for="senha">Senha</label>
+                        <label for="senha">Senha*</label>
                       </div>
                       <div class="text-white form-floating mb-4">
-                        <input required type="date" name="dataNasc" class="col-6 form-control rounded-4" id="floatingInput" placeholder="">
-                        <label for="floatingInput">Data de nacimento</label>
+                        <input required type="date" name="dataNasc" class="col-6 form-control rounded-4" class="floatingInput" placeholder="">
+                        <label for="floatingInput">Data de nacimento*</label>
 
                         <div class="">
                           <input type="checkbox" class="mt-4 ms-1" id="verSenha" onchange="exibir()">

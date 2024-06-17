@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST["submit"])){
         if(isset($_POST["username"]) && ($_POST["email"]) && ($_POST["senha"]) && ($_POST["dataNasc"])){
-            require '../../back/config.php';
+            require '../../../back/config.php';
 
         $username = $_POST["username"];
         $email = $_POST["email"];
@@ -15,8 +15,8 @@ if(isset($_POST["submit"])){
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($row){
-            $_SESSION['logError'] = "Esse E-mail já está cadastrado.";
-            echo "<script>window.location.href='../cadastro.php';</script>";
+            $_SESSION['regError'] = "Esse E-mail já está cadastrado.";
+            echo "<script>window.location.href='../../users.php';</script>";
             exit();
         }
         $sql = "SELECT * FROM user WHERE username = :username";
@@ -25,15 +25,15 @@ if(isset($_POST["submit"])){
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($row){
-            $_SESSION['logError'] = "<alert>Usuário já cadastrado</alert>";
-            echo "<script>window.location.href='../users.php';</script>";
+            $_SESSION['regError'] = "<alert>Usuário já cadastrado</alert>";
+            echo "<script>window.location.href='../../users.php';</script>";
             exit();
         }
         $sql = "INSERT INTO user(username,senha,email,dataNasc) VALUES (:username,:senha,:email,:dataNasc)";
         $stmt = $conn->prepare($sql);
         $stmt->execute(['username' => $username, 'senha' => $senha, 'email' => $email, 'dataNasc'=>$dataNasc]);
-        $_SESSION['sucesso'] = "<alert>Registro de usuário efetuado com sucesso!<a>";
-        echo "<script>window.location.href='../users.php';</script>";
+        $_SESSION['regSucesso'] = 'Usuário adicionado com sucesso!';
+        echo "<script>window.location.href='../../users.php';</script>";
         exit();
     }}
     ?>

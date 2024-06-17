@@ -16,7 +16,7 @@
     <section class="h-100">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-xl-10">
+          <div class="col-xl-10 mt-5 d-flex justify-content-center align-items-center">
             <div style="background-color: #42006a;" class="card border-0 rounded-5 text-black">
               <div class="row g-0">
                 <div class="col-lg-6">
@@ -34,7 +34,7 @@
                           name="email" required data-parsley-length="[8,100]" data-parsley-pattern="^\S+$"
                           data-parsley-pattern-message="Este campo não pode conter espaços em branco."
                           data-parsley-length-message="Este campo deve ter entre 8 á 100 digitos."
-                          class="form-control rounded-4" id="floatingInput" placeholder="">
+                          class="form-control rounded-4" class="floatingInput" placeholder="">
                         <label for="floatingInput">E-mail</label>
                       </div>
                       <div class="text-white form-floating mb-4">

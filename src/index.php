@@ -101,7 +101,6 @@
       </div>
       </div>
       </div>
-<<<<<<< HEAD
       </div>
       </li>
       </div>
@@ -128,35 +127,3 @@
           $('.dropdown-toggle').dropdown();
         });
       </script>
-=======
-    </div>
-  </div>
-</div>
-</div>
-</div>
-        </li>
-    </div>
-  </div>
-</nav>
-<!--site base-->
-<div class="color-overlay">
-<div class="container py-5 h-100 gradient-custom2 shadow-lg"> 
-<i class="fa fa-search"></i>
-  <a href="back/logout.php">Deslogar</a>
-    <h1>Teste 123 nha loló</h1>
-    <?php
-      ?>
-<div>
-  </div>
-  <?php
-var_dump($_SESSION['username']);
-if(!isset($_SESSION['senha']) || !isset($_SESSION['email']))
-?>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-  $(function () {
-    $('.dropdown-toggle').dropdown();
-  }); 
-</script>
->>>>>>> 31dca3be5411cc71eb2c0847de3331df695b7e0a

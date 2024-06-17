@@ -15,14 +15,7 @@
           <li class="nav-item  nav-border-r">
             <a class="nav-link nav-under" href="jogos.php">Jogos</a>
           </li>
-          <form class="ms-3">
-            <li class="outline-primary d-flex" style="width: 250px;">
-              <div class="">
-                <input type="search" class="form-control form-control-lg rounded-4" placeholder="Pesquisar jogos">
-              </div>
-          </form>
-          </li>
-          <ul class="navbar-nav d-flex flex-row nav-border-l ms-3 me-3 align-items-center">
+          <ul class="navbar-nav d-flex flex-row ms-3 me-3 align-items-center">
             <li class="nav-item">
               <?php
             if (!isset($_SESSION['senha']) && !isset($_SESSION['email'])){
@@ -83,20 +76,15 @@
 
       <div class="offcanvas-body">
         <ul class="navbar-nav">
-        <form class="d-flex justify-content-center mb-1">
-            <li class="outline-primary" style="width: 250px;">
-              <input type="search" class="form-control form-control-lg rounded-4 mb-1" placeholder="Pesquisar jogos">
-            </li>
-          </form>
             </li>
           <li>
-            <a class="nav-link nav-mobile mb-2 rounded-4  d-flex justify-content-center" href="#">Usuários</a>
+            <a class="nav-link nav-mobile mb-2 rounded-4  d-flex justify-content-center" href="users.php">Usuários</a>
           </li>
           <li>
-            <a class="nav-link nav-mobile mb-2 rounded-4 d-flex justify-content-center" href="#">Categorias</a>
+            <a class="nav-link nav-mobile mb-2 rounded-4 d-flex justify-content-center" href="categorias.php">Categorias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-mobile mb-2 rounded-4 d-flex justify-content-center" href="">Jogos</a>
+            <a class="nav-link nav-mobile mb-2 rounded-4 d-flex justify-content-center" href="jogos.php">Jogos</a>
           </li>
           </li>
       </div>
