@@ -94,13 +94,14 @@ require '../back/adminLock.php'; ?>
             </div>
             <div class="modal-body">
               <!--formulario edit-->
-              <form autocomplete="off" data-parsley-validate action="devback/categoria/regCate.php" id="regCate" method="post" class="text-white">
-                  <input class="col-6 mb-5" type="file" value="' . $categoria['foto'] .'" name="foto" id="">
+              <form autocomplete="off" data-parsley-validate action="devback/categoria/editCate.php" id="regCate" method="post" class="text-white">
+                  <input class="col-6 mb-5" type="file" name="foto" id="">
                   <div id="preview"></div>
                   <div class="text-white form-floating mb-2">
                   <input required data-parsley-length="[4,20]" data-parsley-pattern="^\S+$" data-parsley-pattern-message="Este campo não pode conter espaços em branco." data-parsley-length-message="Este campo deve ter entre 4 á 20 digitos." type="text" name="nome" class="col-6 form-control bg-dark rounded-4" value="' . $categoria['nome'] .'" class="floatingInput" placeholder="">
                   <label for="floatingInput" value="Texto pré-definido">Nome da categoria*</label>
                   </div>
+                  <input type="hidden" name="id" value="' . $categoria['id'] . ' ">
                       <div class="text-center mt-3 pt-1">
                         <input class="shadow form-control btn btn-primary btn-lg active rounded-4 fw-bold nav-under" value="Editar" name="submit" type="submit">
                         <br>

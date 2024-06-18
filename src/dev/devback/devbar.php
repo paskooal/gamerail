@@ -6,7 +6,10 @@
           <p class="fs-2 m-0" style="font-family: GRfont;">GameRail</p>
         </li>
         <div class="d-lg-flex d-none d-lg-block">
-          <li class="nav-item nav-border-l">
+        <li class="nav-item nav-border-l">
+          <a class="nav-link nav-under" href="dashboard.php">Início</a>
+          </li>
+          <li class="nav-item">
           <a class="nav-link nav-under" href="users.php">Usuários</a>
           </li>
           <li class="nav-item">
@@ -25,6 +28,9 @@
         echo "<a class='fs-5 btn btn-dark nav-under rounded-4 ms-3' href='../back/logout.php'>Logout</a>";
       }
       ?>
+      <?php
+              echo '<span class="ms-3 fs-5">' . $_SESSION['nome'] . '</span>';
+              ?>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navDrop" role="button" data-bs-toggle="dropdown"
@@ -66,6 +72,8 @@
                 <img src="..\..\images\matt.webp" class="rounded-circle" height="40" alt="" loading="lazy" />
               </a>
               <ul id="navDrop" class="dropdown-menu">
+                <?php echo '<li class="ms-3">' . $_SESSION['nome'] . '</li>'; ?>
+                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li><a class="dropdown-item" href="#">Jogos</a></li>
                 <li><a class='dropdown-item' href='..\..\index.php'>Loja</a></li>

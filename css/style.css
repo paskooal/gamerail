@@ -154,3 +154,7 @@ transition: all .3s ease-in;
   border-radius: 10px;
   overflow: hidden;
 }
+img .card-img{
+  width: 1280px;
+  height: 720px;
+}
